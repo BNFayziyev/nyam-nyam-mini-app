@@ -1,48 +1,95 @@
 
 body {
-    font-family: sans-serif;
-    padding: 10px;
-    background: #fdf6f0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f4ee;
 }
-header h1 {
-    font-size: 24px;
+.app-bar {
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-input#search {
+.app-title {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+#search {
     width: 100%;
-    padding: 8px;
-    margin-top: 10px;
+    padding: 10px;
+    margin-top: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
 }
 .categories {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
     gap: 10px;
-    margin: 20px 0;
 }
 .category {
-    background: #fff3;
-    padding: 12px;
-    border-radius: 10px;
-    background: #fff;
+    background-color: #fff;
+    padding: 10px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-size: 15px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 .products {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 12px;
+    padding: 10px;
 }
 .product {
-    background: #fff;
+    background-color: #fff;
+    border-radius: 14px;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
+.product h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+.product p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+.add-btn {
+    margin-top: 8px;
+    padding: 6px 10px;
     background-color: #6c5ce7;
-    color: #fff;
-    font-size: 16px;
+    color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+}
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #666;
+}
+.nav-btn.active {
+    color: #6c5ce7;
+    font-weight: bold;
 }

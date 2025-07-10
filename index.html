@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nyam-Nyam</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>Nyam.Nyam 🍽️</h1>
-        <input type="text" id="search" placeholder="Taomlarni qidirish..." />
+    <header class="app-bar">
+        <h1 class="app-title">Nyam.Nyam</h1>
+        <input type="text" id="search" placeholder="🔍 Taom yoki mahsulot qidirish..." />
     </header>
 
     <section class="categories">
@@ -23,7 +23,11 @@
 
     <section class="products" id="products"></section>
 
-    <button id="submitBtn">✅ Buyurtmani yuborish</button>
+    <footer class="bottom-nav">
+        <button class="nav-btn active">🏠 Asosiy</button>
+        <button class="nav-btn" onclick="openCart()">🛒 Savatcha (<span id='cartCount'>0</span>)</button>
+        <button class="nav-btn">👤 Profil</button>
+    </footer>
 
     <script src="script.js"></script>
 </body>
