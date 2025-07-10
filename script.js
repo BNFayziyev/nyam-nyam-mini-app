@@ -3,41 +3,37 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 
 const products = [
-    { id: 1, name: "Nestle yormasi", price: 12000 },
-    { id: 2, name: "Agusha pyuresi", price: 10000 },
-    { id: 3, name: "Bebi yormasi", price: 15000 },
-    { id: 4, name: "Fruto pyuresi", price: 11000 }
+  { id: 1, name: "Bolalar yormasi", brand: "Nestle", price: 12000, image: "https://via.placeholder.com/100", sizes: ["120g", "250g"] },
+  { id: 2, name: "Bolalar pyuresi", brand: "Agusha", price: 10000, image: "https://via.placeholder.com/100", sizes: ["90g", "180g"] }
 ];
 
 const cart = [];
-const productContainer = document.getElementById("products");
-const cartCount = document.getElementById("cartCount");
+
+const productsEl = document.getElementById("products");
 
 function renderProducts() {
-    products.forEach(p => {
-        const div = document.createElement("div");
-        div.className = "product";
-        div.innerHTML = `
-            <h4>${p.name}</h4>
-            <p>${p.price} so'm</p>
-            <button class="add-btn" onclick="addToCart(${p.id})">➕ Qo'shish</button>
-        `;
-        productContainer.appendChild(div);
-    });
+  products.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <img src="${p.image}" />
+      <h4>${p.name}</h4>
+      <small>${p.brand}</small>
+      <p><b>${p.price} UZS</b></p>
+      <select>${p.sizes.map(s => `<option>${s}</option>`).join("")}</select>
+      <div class="actions">
+        <button class="add-btn" onclick="addToCart(${p.id})">🛒</button>
+        <button class="heart-btn">❤️</button>
+      </div>
+    `;
+    productsEl.appendChild(card);
+  });
 }
 
 function addToCart(id) {
-    const product = products.find(p => p.id === id);
-    cart.push(product);
-    cartCount.textContent = cart.length;
-}
-
-function openCart() {
-    const order = {
-        user: tg.initDataUnsafe.user,
-        items: cart
-    };
-    tg.sendData(JSON.stringify(order));
+  const p = products.find(prod => prod.id === id);
+  cart.push(p);
+  tg.sendData(JSON.stringify({ items: cart }));
 }
 
 renderProducts();

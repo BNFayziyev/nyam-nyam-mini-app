@@ -2,33 +2,41 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nyam-Nyam</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nyam-Nyam</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <header class="app-bar">
-        <h1 class="app-title">Nyam.Nyam</h1>
-        <input type="text" id="search" placeholder="🔍 Taom yoki mahsulot qidirish..." />
-    </header>
+  <header class="header">
+    <div class="left">🇺🇿</div>
+    <div class="title">Nyam Nyam</div>
+    <div class="right">🛒</div>
+  </header>
 
-    <section class="categories">
-        <div class="category">🍼 Bolalar ovqatlari</div>
-        <div class="category">🍲 Pyurelar</div>
-        <div class="category">🥣 Sutli yormalar</div>
-        <div class="category">🛍 Yangiliklar</div>
-    </section>
+  <div class="search-filter">
+    <input type="text" placeholder="Mahsulotni qidirish..." />
+    <button class="filter-btn">⚙️ Filtr</button>
+  </div>
 
-    <section class="products" id="products"></section>
+  <section class="categories">
+    <div class="category-card">🍚<div>Kashalar<br/><small>10 ta mahsulot</small></div><span>›</span></div>
+    <div class="category-card">🥣<div>Bo'tqalar<br/><small>8 ta mahsulot</small></div><span>›</span></div>
+    <div class="category-card">🍎<div>Pyurelar<br/><small>12 ta mahsulot</small></div><span>›</span></div>
+    <div class="category-card">🧷<div>Pamperslar<br/><small>5 ta mahsulot</small></div><span>›</span></div>
+  </section>
 
-    <footer class="bottom-nav">
-        <button class="nav-btn active">🏠 Asosiy</button>
-        <button class="nav-btn" onclick="openCart()">🛒 Savatcha (<span id='cartCount'>0</span>)</button>
-        <button class="nav-btn">👤 Profil</button>
-    </footer>
+  <section class="products" id="products"></section>
 
-    <script src="script.js"></script>
+  <footer class="bottom-nav">
+    <button class="nav-btn active">🏠</button>
+    <button class="nav-btn">📦</button>
+    <button class="nav-btn">🛒</button>
+    <button class="nav-btn">❤️</button>
+    <button class="nav-btn">👤</button>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
