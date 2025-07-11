@@ -109,13 +109,32 @@ header .icons {
 
 .add-to-cart {
   margin-top: 8px;
-  padding: 8px;
+  padding: 10px 14px;
   border: none;
-  background-color: #ff8a00;
+  background: linear-gradient(135deg, #ff8a00, #ffc107);
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.add-to-cart:hover {
+  background: linear-gradient(135deg, #e07a00, #eebc0f);
+  transform: scale(1.03);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.fav-icon {
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.fav-icon:hover {
+  transform: scale(1.2);
 }
 
 /* 6. Pastki navigatsiya */
@@ -129,6 +148,7 @@ header .icons {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
+  z-index: 100;
 }
 
 .bottom-nav a {
@@ -136,4 +156,8 @@ header .icons {
   color: #333;
   font-size: 12px;
   text-align: center;
+}
+
+.bottom-nav a:hover {
+  color: #ff8a00;
 }
