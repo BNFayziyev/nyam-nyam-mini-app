@@ -5,6 +5,8 @@ tg.expand();
 const products = [
   { id: 1, name: "Nutrilon", brand: "AP", price: 249000, image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fchado.uz%2Fproducts%2Fnutricia-nutrilon-ar-premium-sukhaia-smies-0-mies-400-gh%3F_pos%3D27%26_fid%3D4a1e1cfe7%26_ss%3Dc%26srsltid%3DAfmBOoprxDglP2F9oZiRphHKNf8ZBsUPs3ziM5SV--PbOxLZkFiXv1BI&psig=AOvVaw3mNZ4ii-EoI-nipB4UYcaj&ust=1752268503115000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKiUzo2bs44DFQAAAAAdAAAAABAL", sizes: ["120g", "250g"] },
   { id: 2, name: "Nutrilon", brand: "ПРЕ", price: 249000, image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fchado.uz%2Fproducts%2Fnutricia-nutrilon-ar-premium-sukhaia-smies-0-mies-400-gh%3Fvariant%3D41049389531193%26country%3DUZ%26currency%3DUZS%26srsltid%3DAfmBOooibtp5WGFzeVDBU8h3hZmvaXxfFFT0FV53XIBGwYM0TehGbCN2&psig=AOvVaw3mNZ4ii-EoI-nipB4UYcaj&ust=1752268503115000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKiUzo2bs44DFQAAAAAdAAAAABAV", sizes: ["90g", "180g"] }
+  { id: 3, name: "Nestle", brand: "ПРЕ", price: 12000, image: "https://via.placeholder.com/100", sizes: ["120g", "250g"] },
+  { id: 4, name: "NAN", brand: "ПРЕ", price: 10000, image: "https://via.placeholder.com/100", sizes: ["90g", "180g"] }
 ];
 
 const cart = [];
