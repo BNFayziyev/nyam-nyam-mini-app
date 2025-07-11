@@ -57,16 +57,33 @@ header .icons {
 }
 
 /* 4. Qidiruv */
-.search-bar {
-  padding: 10px 16px;
+.search-filter-bar {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
 }
 
-.search-bar input {
-  width: 100%;
+.search-filter-bar input {
+  flex: 1;
   padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid #ccc;
   font-size: 14px;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #ff8a00, #ffc107);
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: linear-gradient(135deg, #e07a00, #eebc0f);
 }
 
 /* 5. Mahsulotlar */
