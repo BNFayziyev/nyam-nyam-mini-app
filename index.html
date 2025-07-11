@@ -1,42 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nyam-Nyam</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyam Nyam</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="left">🇺🇿</div>
-    <div class="title">Nyam Nyam</div>
-    <div class="right">🛒</div>
+
+  <!-- 🔹 Yuqori panel -->
+  <header>
+    <h1>Nyam Nyam</h1>
+    <div class="header-icons">
+      <span>🇺🇿</span>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
   </header>
 
-  <div class="search-filter">
-    <input type="text" placeholder="Mahsulotni qidirish..." />
-    <button class="filter-btn">⚙️ Filtr</button>
+  <!-- 🔹 Qidiruv -->
+  <div class="search-section">
+    <input type="search" placeholder="Mahsulotni qidirish..." class="search-input">
+    <button class="filter-btn"><i class="fas fa-filter"></i> Filtr</button>
   </div>
 
-  <section class="categories">
-    <div class="category-card">🍚<div>Kashalar<br/><small>10 ta mahsulot</small></div><span>›</span></div>
-    <div class="category-card">🥣<div>Bo'tqalar<br/><small>8 ta mahsulot</small></div><span>›</span></div>
-    <div class="category-card">🍎<div>Pyurelar<br/><small>12 ta mahsulot</small></div><span>›</span></div>
-    <div class="category-card">🧷<div>Pamperslar<br/><small>5 ta mahsulot</small></div><span>›</span></div>
-  </section>
+  <!-- 🔹 Kategoriyalar -->
+  <div class="categories">
+    <div class="category-card">
+      <div>
+        <h3>🥣 Kasha</h3>
+        <p>Bolalar uchun yormalar</p>
+      </div>
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    <!-- Qo‘shimcha kategoriyalar ham shu uslubda -->
+  </div>
 
-  <section class="products" id="products"></section>
+  <!-- 🔹 Mahsulotlar -->
+  <div class="products-grid">
+    <div class="product-card">
+      <img src="images/product1.png" alt="Mahsulot">
+      <h4>Bolalar yormasi</h4>
+      <p class="brand">Nestle</p>
+      <p class="price">12 000 UZS</p>
+      <select>
+        <option>120g</option>
+        <option>250g</option>
+      </select>
+      <button class="add-to-cart">🛒 Savatga</button>
+      <i class="far fa-heart favorite-icon"></i>
+    </div>
+    <!-- Yana mahsulotlar -->
+  </div>
 
-  <footer class="bottom-nav">
-    <button class="nav-btn active">🏠</button>
-    <button class="nav-btn">📦</button>
-    <button class="nav-btn">🛒</button>
-    <button class="nav-btn">❤️</button>
-    <button class="nav-btn">👤</button>
-  </footer>
+  <!-- 🔹 Pastki navigatsiya -->
+  <nav class="bottom-nav">
+    <i class="fas fa-home"></i>
+    <i class="fas fa-box"></i>
+    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-user"></i>
+  </nav>
 
-  <script src="script.js"></script>
 </body>
 </html>
